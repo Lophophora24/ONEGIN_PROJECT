@@ -6,9 +6,9 @@
 void bubble_sort(char *data[], int nlines)
 {
     for(int i = 0; i < nlines; ++i)
-        for(int j = 0; j < nlines; ++j) {
-            if(strcmp(data[i], data[j]) < 0){ 
-                swap(data, i, j);
+        for(int j = 0; j < nlines - 1; ++j) {
+            if(strcmp(data[j], data[j+1]) > 0){ 
+                swap(data, j, j+1);
                 //printf("i = %d, j = %d\n", i, j);
                 //print_data();   
             }
